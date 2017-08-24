@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { BoxComponent } from './components/box/box.component';
@@ -8,6 +10,8 @@ import { JoyDirective } from './dircetives/joy/joy.directive';
 import { SadnessDirective } from './dircetives/sadness/sadness.directive';
 import { AdderComponent } from './adder/adder.component';
 import { AaaComponent } from './components/aaa/aaa.component';
+import { MatrixComponent } from './components/matrix/matrix.component';
+import { MatrixService } from './services/matrix/matrix.service';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { AaaComponent } from './components/aaa/aaa.component';
     JoyDirective,
     AdderComponent,
     SadnessDirective,
-    AaaComponent
+    AaaComponent,
+    MatrixComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    MatrixService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

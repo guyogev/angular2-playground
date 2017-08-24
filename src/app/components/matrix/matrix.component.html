@@ -1,0 +1,22 @@
+<div class='matrix'>
+  <div class='matrix-wrapper'>
+    <div class='row' *ngFor='let row of range(_matrix_service.size)'>
+      <div class='cell-wrapper' *ngFor='let column of range(_matrix_service.size)' [ngClass]="{'selected-cell': _matrix_service.selectedCell(row, column)}">
+        <div class='cell'>
+          {{row}}{{column}} {{_matrix_service.selectedCell(row, column)}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='inputs'>
+    <label>Row</label>
+    <input type='number' min=0 max={{_matrix_service.size-1}} [(ngModel)]="_matrix_service.row">
+    
+    <label>Column</label>
+    <input type='number' min=0 max={{_matrix_service.size-1}} [(ngModel)]="_matrix_service.column">
+
+    <label>Size</label>
+    <input type='number' min=0 [(ngModel)]="_matrix_service.size">
+  </div>
+</div>

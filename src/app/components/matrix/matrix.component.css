@@ -1,0 +1,17 @@
+.matrix {
+  display: flex
+}
+.row {
+  display: flex
+}
+.cell-wrapper {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+.cell {
+  padding: 5px;
+}
+.selected-cell {
+  background: silver;
+}

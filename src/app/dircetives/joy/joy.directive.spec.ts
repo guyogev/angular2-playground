@@ -4,6 +4,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TestComponent } from '../../mocks/test_comp';
 import { By } from '@angular/platform-browser';
 
+// based on https://codecraft.tv/courses/angular/unit-testing/directives/
+
 fdescribe('JoyDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
